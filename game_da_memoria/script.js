@@ -54,6 +54,13 @@ function resetBoard () {
     [firstCard, secondCard] = [null, null];
 }
 
+    //função de embaralhar as cartas
+(function shuffle() {
+    cards.forEach((card) => {
+        let randomPosition = Math.floor(Math.random() * 12);
+        card.style.order = randomPosition;
+    })
+})();//imediatleInvocationfunction
 
 cards.forEach((card) =>{
     card.addEventListener('click', flipCard)
